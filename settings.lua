@@ -125,9 +125,9 @@ data:extend({
     },
     {
         type = "bool-setting",
-        name = "debug-hivemind",
-        localised_name = {"settings.debug-hivemind"},
-        localised_description = {"settings.debug-hivemind-description"},
+        name = "hivemind-debug",
+        localised_name = {"settings.hivemind-debug"},
+        localised_description = {"settings.hivemind-debug-description"},
         setting_type = "runtime-global",
         default_value = false
     }
