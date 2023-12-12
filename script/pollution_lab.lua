@@ -49,7 +49,7 @@ end
 local pollution_absorb_min_debugged = 1
 local pollution_absorb_percent_debugged = 1
 
-local update_lab_debugged = function(entity) -- TODO: Fix this to accept pollution amount dynamically based on how occipied the labs are!
+local update_lab_debugged = function(entity) -- TODO: Check if we can insert pollution with limited durability to allow for the inserting of non-integer values of pollution!
   if not (entity and entity.valid) then return true end
   local force = entity.force
 
@@ -63,9 +63,9 @@ local update_lab_debugged = function(entity) -- TODO: Fix this to accept polluti
   
   if settings.global["hivemind-debug"].value then game.print("Lab entity called: Pollution in chunk:" .. available_pollution) end
   if pollution_to_take < pollution_absorb_min_debugged then return end -- Guard clause, no polution to take. The way this is set up is different than original, which required at least pollution_absorb_min / pollution_absorb_percent 
-  if settings.global["hivemind-debug"].value then game.print("Lab consuming pollution: " .. pollution_to_take) end
   
-  pollution_to_take  = entity.insert({name = names.pollution_proxy, count = pollution_to_take})
+  pollution_to_take  = entity.insert({name = names.pollution_proxy, count = pollution_to_take}) -- This returns the inserted amount, which means that we don't need to worry about overfilling the lab, or potentially "losing" pollution.
+  if settings.global["hivemind-debug"].value then game.print("Lab consuming pollution: " .. pollution_to_take) end
   game.pollution_statistics.on_flow(entity.name, -pollution_to_take)
   surface.pollute(position, -pollution_to_take)
 
