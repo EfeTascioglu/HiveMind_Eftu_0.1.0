@@ -2,16 +2,17 @@ local name = names.pollution_burner_mining_drill
 
 local id = "Pollution Burner Mining Drill"
 
-local drill = util.copy(data.raw["mining-drill"]["burner-mining-drill"])
-local spawner_graphics = util.copy(data.raw["unit-spawner"]["biter-spawner"])
-local tint = {r = 0.65, b = 0.60, g = 0.4}
-util.recursive_hack_scale(spawner_graphics, 0.60)
+local drill = util.copy(data.raw["mining-drill"]["burner-mining-drill"])      -- This imports the two graphics from the Factorio API
+local spawner_graphics = util.copy(data.raw["unit-spawner"]["biter-spawner"]) -- This imports the two graphics from the Factorio API
+local tint = {r = 0.65, b = 0.60, g = 0.4}                                    -- This tints the graphics that will be applied to the graphics
+util.recursive_hack_scale(spawner_graphics, 0.60)                            -- This scales the spawner to overlap with the miner
 util.recursive_hack_make_hr(spawner_graphics)
 util.recursive_hack_tint(spawner_graphics, tint)
 
 util.recursive_hack_make_hr(drill)
 util.recursive_hack_tint(drill, tint)
 
+-- drill.icons creates the two different images and overlays them instead of drill.icon which only keeps one of them!
 drill.icons =
 {
   {
@@ -35,7 +36,7 @@ drill.mining_speed = 0
 drill.energy_source = {type = "void", emissions_per_minute = 6}
 drill.resource_searching_radius = 0.5
 drill.collision_mask = util.buildable_on_creep_collision_mask()
-drill.resource = {"coal", "copper-ore", "iron-ore"}
+drill.resource = {"coal", "copper-ore", "iron-ore", "stone"}
 drill.vector_to_place_result = {0, 0}
 drill.base_picture = spawner_graphics.animations[4]
 drill.working_sound = spawner_graphics.working_sound

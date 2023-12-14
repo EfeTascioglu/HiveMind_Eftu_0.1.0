@@ -61,7 +61,7 @@ data:extend({
         localised_description = {"settings.hivemind-starting-popcap-description"},
         setting_type = "runtime-global",
         minimum_value = 0,
-        default_value = 24
+        default_value = 20
     },
     {
         type = "int-setting",

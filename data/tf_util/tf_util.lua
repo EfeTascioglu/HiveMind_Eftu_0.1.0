@@ -390,7 +390,7 @@ util.evo_factor_to_pollution_cost = function(evo_factor)
   return (shared.evolution_factor_to_pollution_cost.base + math.floor(0.5+shared.evolution_factor_to_pollution_cost.multiplier *((math.floor(0.5+evo_factor*10))^(shared.evolution_factor_to_pollution_cost.power_effect * evo_factor))) * 25)
 end
 
-util.required_pollution = function(name, entity)
+util.required_pollution = function(name, entity) -- TODO: Replace required pollution with required biomatter
   pollution_cost = shared.required_pollution[name]
   if pollution_cost then return pollution_cost end
 
