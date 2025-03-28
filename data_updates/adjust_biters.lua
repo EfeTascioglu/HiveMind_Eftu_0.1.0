@@ -7,7 +7,7 @@ local default_unlocked = shared.default_unlocked
 local dependency_list = {biters = {}, worms = {}, deployers = {}, deployer = {}}
 local pollution_values = {biters = {}, worms = {}, deployers = {}}
 
-local make_biter_item = function(prototype, subgroup)
+local make_biter_item = function(prototype, subgroup) -- Note: This is where biters are defined
   local item =
   {
     type = "item",

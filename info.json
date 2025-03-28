@@ -5,7 +5,7 @@
   "author": "Eftu",
   "contact": "",
   "homepage": "",
-  "description": "The original Hive Mind mod created by Klonan, Re-made by Mitchplay and CosmicWolf, Re-made by Eftu. \n\nTake control of the Biters, defend your home planet from the foreign invaders, The Engineers! Build Spawners and influence a pollution based economy, and lead yourself to Victory! \n\n --MitchPlay Discord: https://discord.gg/rhPXFdJmE9\n\nThank you again Klonan for allowing me to remake this mod!",
+  "description": "The original Hive Mind mod created by Klonan, Re-made by Mitchplay and CosmicWolf, Re-made by Eftu. \n\nTake control of the Biters, defend your home planet from the foreign invaders, The Engineers! Build Spawners and influence a pollution based economy, and lead yourself to Victory! \n\n This version of the mod is a more user-friendly version that I created for use with me and my friends and uploaded for easier pushed updates. It is completely open source, and also liscneced under lGPL like MitchPlays version, so you can use, modify or redistrubute in any way you like. If you choose to modify the mod, I could give you a quick run-down of the codebase to help you get started :)\n\n --MitchPlay Discord: https://discord.gg/rhPXFdJmE9\n\nThank you again Klonan for allowing me to remake this mod!",
   "dependencies": [
     "base >= 1.1.46",
     "Unit_Control >= 0.3.0",
