@@ -1,4 +1,6 @@
 ## HiveMind Eftu
+Sometimes, I get an itch to play a tense game of Factorio with some friends. Unfortunately, our favourite mod for this, HiveMind, has not been updated in over a year and a half, and has a handful of bugs making it difficult for new players to get started, and leading to issues (specifically surrounding research and technology). This is a temporary mod to fulfill these goals until HiveMind gets officially updated.
+
 --------------------------------------
 This version is made by Eftu, a modified verision of HiveMind by MitchPlay and CosmicWolf, originally by Klonan
 
